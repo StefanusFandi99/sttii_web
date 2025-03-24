@@ -1,9 +1,8 @@
 import { useState } from "react";
-import HeroImage from "../assets/hero.svg";
-import AboutImage from "../assets/about.svg";
-import projek1 from "../assets/proyek-1.webp";
-import projek2 from "../assets/proyek-2.webp";
-import projek3 from "../assets/proyek-3.webp";
+import AboutImage from "../assets/about.png";
+import projek1 from "../assets/stti-1.jpeg";
+import projek2 from "../assets/stti-2.jpeg";
+import projek3 from "../assets/stti-3.jpeg";
 
 const Homepage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,9 +22,9 @@ const Homepage = () => {
             <div className="container mx-auto px-4">
                 
                 {/* Hero Section */}
-                <div className="hero grid grid-cols-2 items-center gap-20 pt-32">
+                <div className="hero grid grid-cols-2 items-center gap-20 pt-20">
                     <div className="box">
-                        <h1 className="text-4xl font-medium mb-7">
+                        <h1 className="text-4xl font-medium mb-2">
                             Selamat Datang di <span className="font-bold text-sky-400 underline">STTI Purwokerto</span>
                         </h1>
                         <p className="text-base mb-4">
@@ -69,9 +68,9 @@ const Homepage = () => {
                 </div>
 
                 {/* About Section */}
-                <div className="about grid grid-cols-2 items-center gap-10 pt-32">
+                <div className="about grid grid-cols-2 items-center gap-10 pt-10">
                     <div className="box">
-                        <img src={HeroImage} alt="About Image" className="h-auto w-full" />
+                        <img src={AboutImage} alt="About Image" className="h-auto w-full" />
                     </div>
                     <div className="box">
                         <h1 className="text-4xl font-medium mb-7">
@@ -85,7 +84,7 @@ const Homepage = () => {
                 </div>
 
                 {/* Services Section */}
-                <div className="services pt-32">
+                <div className="services pt-10">
                     <h1 className="text-center text-4xl font-medium mb-2">Layanan</h1>
                     <p className="text-center mb-6">Berbagai layanan terbaik yang kami sediakan</p>
                     <div className="services-box grid grid-cols-1 md:grid-cols-3 gap-6">
