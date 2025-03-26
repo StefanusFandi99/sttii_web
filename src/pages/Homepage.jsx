@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AboutImage from "../assets/about.png";
 import projek1 from "../assets/stti-1.jpeg";
 import projek2 from "../assets/stti-2.jpeg";
 import projek3 from "../assets/stti-3.jpeg";
+import projek4 from "../assets/sttii-4.jpeg";
+import projek5 from "../assets/sttii-5.jpeg";
+import projek6 from "../assets/sttii-6.jpeg";
+import projek7 from "../assets/sttii-7.jpeg";
+import projek8 from "../assets/sttii-8.jpeg";
+import projek9 from "../assets/sttii-9.jpeg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-
-
 const Homepage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const images = [projek1, projek2, projek3];
+    const images = [projek1, projek2, projek3, projek4, projek5, projek6, projek7, projek8, projek9];   
 
-    
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
@@ -21,12 +24,16 @@ const Homepage = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <>
             <Navbar />
-            <div className="homepage pt-16">
+            <div className="homepage pt-16 pb-8">
                 <div className="container mx-auto px-4">
-
                     {/* Hero Section */}
                     <div className="hero grid grid-cols-1 md:grid-cols-2 items-center gap-10 pt-10 pb-5">
                         <div className="box">
@@ -49,13 +56,12 @@ const Homepage = () => {
                                     <img
                                         key={index}
                                         src={image}
-                                        className={`absolute w-full h-full object-cover transition-opacity duration-700 ${index === currentIndex ? "opacity-100" : "opacity-0"
-                                            }`}
+                                        className={`absolute w-full h-full object-cover transition-opacity duration-700 ${index === currentIndex ? "opacity-100" : "opacity-0"}`}
                                         alt={`Slide ${index + 1}`}
                                     />
                                 ))}
                             </div>
-
+                            
                             {/* Buttons */}
                             <button
                                 onClick={prevSlide}
@@ -85,7 +91,6 @@ const Homepage = () => {
                             <p className="text-base">
                                 Menjadi Pendidikan Tinggi Teologi Injili yang unggul, bersifat Imani dan Interdenominasi, untuk menghasilkan abdi yang kompeten di bidang teologi (sarjana), berakhlak mulia (suci) dan berkomitmen tinggi terhadap pelayanan (setia) dalam rangka mewujudkan Indonesia 1.1.1.
                             </p>
-
                             <h2 className="font-bold py-2">Misi</h2>
                             <p className="text-base">
                                 1. Menyelenggarakan pendidikan tinggi Teologi Injili yang unggul untuk menghasilkan abdi yang kompeten, berakhlak mulia, dan berkomitmen tinggi dalam pelayanan.<br />
@@ -115,9 +120,17 @@ const Homepage = () => {
                         </div>
                     </div>
 
+                    {/* Image Slider */}
+                    <div className="image-slider mt-10 overflow-hidden relative w-full max-w-4xl mx-auto">
+                        <div className="flex animate-scroll space-x-4">
+                            {images.concat(images).map((image, index) => (
+                                <img key={index} src={image} className="w-1/3 h-auto rounded-lg" alt={`Slider ${index + 1}`} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <Footer/>
+            <Footer />
         </>
     );
 };

@@ -8,13 +8,10 @@ import Sejarah from "./pages/Sejarah";
 function App() {
     return (
         <Router>
-            <Navbar />
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/" element={<Sejarah />} />
-                {/* Tambahkan semua Route sesuai dengan file yang ada */}
             </Routes>
-            <Footer />
         </Router>
     );
 }
