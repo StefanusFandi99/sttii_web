@@ -24,7 +24,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className="navbar fixed top-0 left-0 w-full bg-cyan-50 shadow-md z-50">
+        <div className="navbar fixed top-0 left-0 w-full bg-yellow-500 shadow-md z-50">
             <div className="container mx-auto px-3">
                 <div className="navbar-box flex items-center justify-between py-2">
                     {/* Logo */}
@@ -36,7 +36,7 @@ const Navbar = () => {
                     <ul className="flex lg:gap-12 gap-4 relative">
                         {/* Beranda (Tanpa Dropdown) */}
                         <li>
-                            <Link to="/" className="font-medium opacity-75 hover:opacity-100 transition">
+                            <Link to="/" className="font-bold text-white hover:text-blue-950 transition cursor-pointer">
                                 Beranda
                             </Link>
                         </li>
@@ -44,18 +44,18 @@ const Navbar = () => {
                         {/* Profil Dropdown */}
                         <li className="relative dropdown-container">
                             <span
-                                className="font-medium opacity-75 hover:opacity-100 transition cursor-pointer"
+                                className="font-bold text-white  hover:text-blue-950 transition cursor-pointer"
                                 onClick={() => toggleDropdown(0)}
                             >
                                 Profil
                             </span>
                             {openDropdown === 0 && (
                                 <ul className="absolute left-0 top-full mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden" onClick={(e) => e.stopPropagation()}>
-                                    <li className="hover:bg-gray-200 px-4 py-2"><Link to="/sejarah">Sejarah</Link></li>
-                                    <li className="hover:bg-gray-200 px-4 py-2"><Link to="/visi-misi">Visi & Misi</Link></li>
-                                    <li className="hover:bg-gray-200 px-4 py-2"><Link to="/staff">Staff</Link></li>
-                                    <li className="hover:bg-gray-200 px-4 py-2"><Link to="/beasiswa">Beasiswa</Link></li>
-                                    <li className="hover:bg-gray-200 px-4 py-2"><Link to="/pmb">PMB</Link></li>
+                                    <li className=" hover:bg-blue-400 px-4 py-2"><Link to="/sejarah">Sejarah</Link></li>
+                                    <li className="hover:bg-blue-400 px-4 py-2"><Link to="/visi-misi">Visi & Misi</Link></li>
+                                    <li className="hover:bg-blue-400 px-4 py-2"><Link to="/staff">Staff</Link></li>
+                                    <li className="hover:bg-blue-400 px-4 py-2"><Link to="/beasiswa">Beasiswa</Link></li>
+                                    <li className="hover:bg-blue-400 px-4 py-2"><Link to="/pmb">PMB</Link></li>
                                 </ul>
                             )}
                         </li>
@@ -63,7 +63,7 @@ const Navbar = () => {
                         {/* Prodi Dropdown */}
                         <li className="relative dropdown-container">
                             <span
-                                className="font-medium opacity-75 hover:opacity-100 transition cursor-pointer"
+                                className="font-bold text-white  hover:text-blue-950 transition cursor-pointer"
                                 onClick={() => toggleDropdown(1)}
                             >
                                 Prodi
@@ -78,9 +78,9 @@ const Navbar = () => {
                         </li>
 
                         {/* Informasi Dropdown */}
-                        <li className="relative dropdown-container">
+                        <li className="relative dropdown-container ">
                             <span
-                                className="font-medium opacity-75 hover:opacity-100 transition cursor-pointer"
+                                className="font-bold text-white  hover:text-blue-950 transition cursor-pointer"
                                 onClick={() => toggleDropdown(2)}
                             >
                                 Informasi
@@ -96,14 +96,14 @@ const Navbar = () => {
 
                         {/* Kontak Kami (Tanpa Dropdown) */}
                         <li>
-                            <Link to="/kontak-kami" className="font-medium opacity-75 hover:opacity-100 transition">
+                            <Link to="/kontak-kami" className="font-bold text-white  hover:text-blue-950 transition cursor-pointer">
                                 Kontak Kami
                             </Link>
                         </li>
                     </ul>
 
                     {/* Pendaftaran Button */}
-                    <div className="bg-sky-400 flex rounded-md px-4 py-2 text-white font-bold hover:bg-sky-500 cursor-pointer">
+                    <div className="bg-blue-950 flex rounded-md px-4 py-2 text-white font-bold hover:bg-yellow-500 cursor-pointer">
                         <a href="https://docs.google.com/forms/d/139LIYHsAIiw69IieStFIKfVtZebdP_N8g4PISbkYMbA/viewform?fbclid=PAZXh0bgNhZW0CMTEAAab_QGVSCibr_IawHGVor6B4GDLYRw6aZvy3NuSQXpgIkOLOJShiJJQsLPw_aem_kZLAsKryQuQ3WIxsyXF-AA&edit_requested=true">Pendaftaran</a>
                     </div>
                 </div>

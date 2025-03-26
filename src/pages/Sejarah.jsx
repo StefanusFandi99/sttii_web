@@ -1,6 +1,6 @@
 import Logo from "../assets/logo-sttii.png";
 
-const Footer = () => {
+const Sejarah = () => {
     return (
         <footer className="bg-cyan-50 shadow-md py-6 mt-10">
             <div className="container mx-auto flex justify-between items-center px-3">
@@ -35,4 +35,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default Sejarah;

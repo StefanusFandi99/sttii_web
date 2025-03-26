@@ -4,7 +4,7 @@ import logo from "../assets/logo-sttii.png";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto w-full bg-sky-400 text-white  px-4 sm:px-6 lg:px-8 mx-auto">
+    <footer className="mt-auto w-full bg-yellow-500 text-white  px-4 sm:px-6 lg:px-8 mx-auto">
       {/* Logo Section */}
       <div className="border-b pb-1 border-gray-200 flex items-center gap-2">
         <img src={logo} alt="Logo" className="size-20 w-auto pt-2" />
