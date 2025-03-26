@@ -142,10 +142,10 @@ const Homepage = () => {
                     animation: marquee 10s linear infinite;
                 }
             `}</style>
-            <div className=" gmaap w-full h-96 my-3 bg-blue-950">
+            <div className=" gmap w-full h-96 pb-5  bg-blue-950">
       <iframe
         title="Google Map"
-        className="w-full h-full"
+        className=" w-5/6 h-full bg-blue-950  px-3 rounded-2xl "
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.72110738674!2d109.29775687318929!3d-7.496012273930169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655b69e3709c45%3A0x996c4c09b89bdae7!2sSTTII%20Purwokerto!5e0!3m2!1sid!2sid!4v1743000212280!5m2!1sid!2sid"
         allowFullScreen
         loading="lazy"
