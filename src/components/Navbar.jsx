@@ -104,7 +104,7 @@ const Navbar = () => {
                         </li>
 
                         <li>
-                            <Link to="/kontak-kami" className="font-bold text-white hover:text-blue-950 transition cursor-pointer block px-4 py-2">Kontak Kami</Link>
+                            <Link to="/kontak" className="font-bold text-white hover:text-blue-950 transition cursor-pointer block px-4 py-2">Kontak Kami</Link>
                         </li>
 
 

@@ -11,6 +11,9 @@ import projek8 from "../assets/sttii-8.jpeg";
 import projek9 from "../assets/sttii-9.jpeg";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Church1 from "../assets/church-1.svg";
+import Church2 from "../assets/church-2.svg";
+import School from "../assets/school.svg";
 
 const Homepage = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,7 +83,7 @@ const Homepage = () => {
                     </div>
                     
                     {/* About Section */}
-                    <div className="about grid grid-cols-1 md:grid-cols-2 items-center gap-10 pt-10 bg-yellow-500 rounded-lg p-6">
+                    <div className="about grid grid-cols-1 md:grid-cols-2 items-center gap-10 pt-1 bg-yellow-500 rounded-lg p-1">
                         <div className="box">
                             <img src={AboutImage} alt="About" className="h-auto w-full rounded-lg" />
                         </div>
@@ -108,14 +111,17 @@ const Homepage = () => {
                         <div className="services-box grid grid-cols-1 md:grid-cols-3 gap-6">
                             <div className="box bg-yellow-500 rounded-lg shadow p-6 text-white text-center">
                                 <h3 className="text-xl font-bold mt-4 mb-2">S1 Teologi</h3>
+                                <img className="h-32 w-32 mx-auto" src={Church1} alt="" />
                                 <p className="text-base">Program studi yang membekali mahasiswa dengan pemahaman mendalam tentang teologi.</p>
                             </div>
                             <div className="box bg-yellow-500 rounded-lg shadow p-6 text-white text-center">
                                 <h3 className="text-xl font-bold mt-4 mb-2">S1 Pendidikan Agama Kristen</h3>
+                                <img className="h-32 w-32 mx-auto " src={School} alt="" />
                                 <p className="text-base">Mempersiapkan tenaga pendidik agama Kristen yang kompeten dan berkarakter.</p>
                             </div>
                             <div className="box bg-yellow-500 rounded-lg shadow p-6 text-white text-center">
                                 <h3 className="text-xl font-bold mt-4 mb-2">S2 Teologi</h3>
+                                <img className="h-32 w-32 mx-auto" src={Church2} alt="" />
                                 <p className="text-base">Program lanjutan untuk memperdalam pemahaman teologi secara akademik.</p>
                             </div>
                         </div>
